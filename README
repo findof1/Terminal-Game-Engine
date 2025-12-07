@@ -1,3 +1,4 @@
+'''markdown
 # Terminal Game Engine
 
 A lightweight C++ engine for building text adventure games.  
@@ -56,3 +57,4 @@ Here’s a simple example of creating a basic game:
 ![Game in action](Images/actions.png)
 
 ![Game in action](Images/scenes.png)
+'''
