@@ -1,4 +1,3 @@
-'''markdown
 # Terminal Game Engine
 
 A lightweight C++ engine for building text adventure games.  
@@ -18,24 +17,24 @@ A lightweight C++ engine for building text adventure games.
 
 Clone the repository:
 
-'''bash
+```bash
 git clone https://github.com/findof1/Terminal-Game-Engine.git
 cd Terminal-Game-Engine
-'''
+```
 
 Create a build directory and run CMake:
 
-'''bash
+```bash
 mkdir build
 cd build
 cmake ..
-'''
+```
 
 Build the project:
 
-'''bash
+```bash
 cmake --build . --config Release
-'''
+```
 
 Notes:
 - Make sure your environment paths include any required DLLs on Windows (e.g., SDL3, GLFW).
@@ -57,4 +56,3 @@ Here’s a simple example of creating a basic game:
 ![Game in action](Images/actions.png)
 
 ![Game in action](Images/scenes.png)
-'''
