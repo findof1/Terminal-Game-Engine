@@ -1,0 +1,58 @@
+# Terminal Game Engine
+
+A lightweight C++ engine for building text adventure games.  
+
+## Features
+
+- **Easy to use node editor**  
+  Make complicated and diverse games with the simple node editor.
+  
+- **Automatic Exporting Games**  
+  Export your game to play with the Engine Runner
+
+- **Handles in-game variables and conditionals**  
+  Use variables and conditionals to make any game logic
+
+## Installation
+
+Clone the repository:
+
+'''bash
+git clone https://github.com/findof1/Terminal-Game-Engine.git
+cd Terminal-Game-Engine
+'''
+
+Create a build directory and run CMake:
+
+'''bash
+mkdir build
+cd build
+cmake ..
+'''
+
+Build the project:
+
+'''bash
+cmake --build . --config Release
+'''
+
+Notes:
+- Make sure your environment paths include any required DLLs on Windows (e.g., SDL3, GLFW).
+- EngineCore is built as a shared library and automatically linked to EngineGUI.
+- You can add your own runner by creating a new executable that links to EngineCore if needed.
+
+## Usage Example
+
+Here’s a simple example of creating a basic game:
+
+![Game in action](Images/demo.png)
+
+## Images
+
+![Game in action](Images/variables.png)
+
+![Game in action](Images/conditionals.png)
+
+![Game in action](Images/actions.png)
+
+![Game in action](Images/scenes.png)
