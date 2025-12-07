@@ -1,0 +1,106 @@
+{
+  "global": {
+    "global_variables": {
+      "exampleBool": {
+        "type": "bool",
+        "state": false
+      },
+      "exampleInt": {
+        "type": "int",
+        "state": 15
+      },
+      "exampleString": {
+        "type": "string",
+        "state": "Foo bar"
+      }
+    },
+    "scenes": {
+      "ExampleScene": {
+        "local_variables": {
+          "exampleBool": {
+            "type": "bool",
+            "state": false
+          },
+          "exampleInt": {
+            "type": "int",
+            "state": 15
+          },
+          "exampleString": {
+            "type": "string",
+            "state": "Foo bar"
+          }
+        },
+        "prompt": {
+          "text": "Example Prompt Text",
+          "choices": [
+            {
+              "text": "Example Choice 1",
+              "actions": [
+                {
+                  "condition": { "localVarEquals": ["exampleBool", true] },
+                  "goto": "ExampleScene2"
+                },
+                {
+                  "type": "increment",
+                  "target": "local.exampleInt"
+                },
+                {
+                  "type": "set",
+                  "target": "local.exampleString",
+                  "value": "Hello World!"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ExampleRecursiveScene": {
+        "local_variables": {
+          "exampleBool": {
+            "type": "bool",
+            "state": false
+          },
+          "exampleInt": {
+            "type": "int",
+            "state": 15
+          },
+          "exampleString": {
+            "type": "string",
+            "state": "Foo bar"
+          }
+        },
+        "prompt": {
+          "text": "Example Prompt Text",
+          "choices": [
+            {
+              "text": "Example Choice 1",
+              "actions": [
+                {
+                  "condition": { "globalVarEquals": ["exampleBool", true] },
+                  "doPrompt": {
+                    "text": "Prompt Recursion",
+                    "choices": [
+                      {
+                        "text": "Example Choice 1",
+                        "actions": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "increment",
+                  "target": "local.exampleInt"
+                },
+                {
+                  "type": "set",
+                  "target": "local.exampleString",
+                  "value": "Hello World!"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
